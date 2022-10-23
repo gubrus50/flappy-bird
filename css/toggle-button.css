@@ -1,0 +1,55 @@
+.toggle-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100px;
+  height: 32px;
+  position: relative;
+  user-select: none;
+
+}
+.toggle-button > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+}
+.toggle-button > .toggle-on {
+  border-color: rgb(98.079, 176.54, 14.712) 
+                rgb(192.88, 245.19, 137.31)
+                rgb(192.88, 245.19, 137.31)
+                rgb(98.079, 176.54, 14.712);
+  background-color: rgb(160,240,75);
+  color: rgb(98.079, 176.54, 14.712);
+}
+.toggle-button > .toggle-off {
+  border-color: rgb(191.25, 0, 0) 
+                rgb(255, 127.5, 127.5)
+                rgb(255, 127.5, 127.5)
+                rgb(191.25, 0, 0);
+  background-color: rgb(255, 60, 60);
+  color: rgb(191.25, 0, 0);
+}
+.toggle-button > .disabled {
+  border-color: rgb(239, 157.71, 111.63)
+                rgb(114.7, 49.669, 12.801)
+                rgb(114.7, 49.669, 12.801)
+                rgb(239, 157.71, 111.63);
+  background-color: rgb(224, 97, 25);
+  color: #FFF;
+}
+.toggle-button[disabled] > span {
+  border-color: rgb(128, 128, 128) 
+                rgb(191.25, 191.25, 191.25)
+                rgb(191.25, 191.25, 191.25)
+                rgb(128, 128, 128);
+  background-color: rgb(159.38, 159.38, 159.38);
+  color: rgb(128, 128, 128);
+}
+.toggle-button[disabled] > span.disabled {
+  border-color: rgb(191.25, 191.25, 191.25)
+                rgb(128, 128, 128) 
+                rgb(128, 128, 128)
+                rgb(191.25, 191.25, 191.25);
+  background-color: rgb(159.38, 159.38, 159.38);
+  color: #FFF;
+}

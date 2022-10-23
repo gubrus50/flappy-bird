@@ -1,0 +1,43 @@
+.scroll-wheel {
+  display: block;
+  width: 50px;
+  height: 30px;
+  background-color: rgb(150.22, 144.06, 136.66);
+  border-top: 2px solid var(--outline-color);
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.3;
+}
+.scroll-wheel:hover {
+  opacity: 1;
+}
+.scroll-wheel > span {
+  --texture-color: rgba(118.34, 112.18, 104.78);
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 15px 15px;
+  background-image: linear-gradient(
+    90deg, 
+    var(--texture-color) 25%, 
+    transparent 25%, 
+    transparent 50%, 
+    var(--texture-color) 50%, 
+    var(--texture-color) 75%, 
+    transparent 75%, 
+    transparent
+  );
+}
+.scroll-wheel::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--outline-color);
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 8px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}

@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Flappy Bird</title>
+  <link type="text/css" rel="stylesheet" href="./css/slider.css" />
+  <link type="text/css" rel="stylesheet" href="./css/scroll-wheel.css" />
+  <link type="text/css" rel="stylesheet" href="./css/toggle-button.css" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div id="object-pipes"></div>
+  <div id="score" class="hide"></div>
+  <div id="avatar" class="entity flying">
+    <div class="body"></div>
+  </div>
+  <div id="menu" class="hide">
+    <div class="banner">
+      <img class="logo" src="./img/logo.png"/>
+      <img class="game-over" src="./img/game-over.png"/>
+    </div>
+    <div class="board">
+      <div class="container" name="scoreboard">
+        <div>
+          <p>Medal</p>
+          <div class="medal">
+            <img src="./img/iconmonstr-star-7.svg"/>
+          </div>
+        </div>
+        <div>
+          <p>Score</p>
+          <p class="score">0</p>
+          <p>Best</p>
+          <p class="score">0</p>
+        </div>
+      </div>
+      <div class="container" name="settings">
+        <div>
+          <label for="volume">volume</label>
+          <label for="time">time</label>
+          <label for="map-speed">map_speed</label>
+          <label for="gravity">gravity</label>
+          <label for="pipes-between-distance">distance</label>
+          <label for="hitbox">hitbox</label>
+        </div>
+        <div>
+          <div class="slider lockable" name="volume" show-progress>
+            <div class="slider-bar"><span class="slider-progress"></span></div>
+            <span class="slider-handle"></span>
+          </div>
+          <div class="slider lockable" name="time" show-progress>
+            <div class="slider-bar"><span class="slider-progress"></span></div>
+            <span class="slider-handle"></span>
+          </div>
+          <div class="slider lockable" name="map-speed" show-progress>
+            <div class="slider-bar"><span class="slider-progress"></span></div>
+            <span class="slider-handle"></span>
+          </div>
+          <div class="slider lockable" name="gravity" show-progress>
+            <div class="slider-bar"><span class="slider-progress"></span></div>
+            <span class="slider-handle"></span>
+          </div>
+          <div style="position: relative">
+            <input class="lockable" type="number" name="pipes-between-distance" title="Distance between old and newly summoned pipe (unit: Pixels)" />
+            <div class="scroll-wheel scroll-wheel-distance lockable" for="pipes-between-distance" title="drag or scroll to change input's value"></div>
+          </div>
+          <div style="display: flex; align-items: center">
+            <div class="toggle-button lockable" name="hitbox"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <button class="btn" name="start"></button>
+      <button class="btn" name="replay"></button>
+      <button class="btn" name="more"></button>
+      <button class="btn" name="back"></button>
+    </div>
+  </div>
+  <footer>
+    <div class="object-grass">
+      <span></span>
+    </div>
+  </footer>
+  <script type="text/javascript" name="libraries" src="js/libraries.js"></script>
+  <script type="text/javascript" name="slider" src="js/slider.js"></script>
+  <script type="text/javascript" name="scrollWheel" src="js/scroll-wheel.js"></script>
+  <script type="text/javascript" name="toggleButton" src="js/toggle-button.js"></script>
+  <script type="text/javascript" name="game" src="js/game.js"></script>
+  <script type="text/javascript" name="pipes" src="js/pipes.js"></script>
+  <script type="text/javascript" name="avatar" src="js/avatar.js"></script>
+  <script type="text/javascript" name="menu" src="js/menu.js"></script>
+  <script type="text/javascript" name="main" src="js/main.js"></script>
+</body>
+</html>

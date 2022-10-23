@@ -1,0 +1,89 @@
+:root {
+  --slider-height: 32px;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+  height: 32px;
+  padding: 0px !important;
+  user-drag: none;
+  user-select: none;
+}
+.slider-bar {
+  width: 100%;
+  border: 2px solid rgb(230, 190, 75);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 191.25);
+  height: 15px;
+  overflow: hidden;
+}
+.slider[disabled] > .slider-bar {
+  border-color: rgb(128, 128, 128);
+  background-color: rgb(159.38, 159.38, 159.38);
+}
+.slider[show-progress] > .slider-bar > .slider-progress {
+  --slider-percentage: 0%;
+  display: block;
+  width: var(--slider-percentage);
+  height: 100%;
+  transition: 1s background-color;
+  background-color: rgb(226.63, 248.91, 66.094);
+}
+.slider[show-progress] > .slider-bar > .slider-progress.middle {
+  background-color: rgb(160,240,75);
+}
+.slider[show-progress] > .slider-bar > .slider-progress.high {
+  transition: 1s background-color;
+  background-color: rgb(255, 60, 60);
+}
+.slider[show-progress] > .slider-bar > .slider-progress.low {
+  transition: 1s background-color;
+  background-color: rgb(72.188, 180.43, 242.81);
+}
+.slider[show-progress][disabled] > .slider-bar > .slider-progress {
+  opacity: 0.5;
+}
+.slider-handle {
+  --handle-text-shade-color: rgb(123.52, 93.385, 3.9844);
+  --handle-border-color: rgb(247.03, 186.77, 7.9688);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: calc(var(--slider-percentage) - (35px / 2));
+  transform: translateY(-50%);
+  height: 28px;
+  width: 35px;
+
+  font-family: "silkscreen-regular";
+  font-size: 60%;
+  color: #FFF;
+  text-shadow: -1px 0 var(--handle-text-shade-color),
+                0 1px var(--handle-text-shade-color),
+                1px 0 var(--handle-text-shade-color),
+               0 -1px var(--handle-text-shade-color);
+
+  border-radius: 5px;
+  background-color: rgb(255, 206.79, 63.75);
+  box-shadow: inset 1px 0 var(--handle-border-color),
+              inset 0 1px var(--handle-border-color),
+              inset -1px 0 var(--handle-border-color),
+              inset 0 -1px var(--handle-border-color);
+}
+.slider[disabled] .slider-handle {
+  --handle-text-shade-color: rgb(95.625, 95.625, 95.625);
+  --handle-border-color: rgb(95.625, 95.625, 95.625);
+  background-color: rgb(143.44, 143.44, 143.44);
+  box-shadow: inset 1px 0 var(--handle-border-color),
+              inset 0 1px var(--handle-border-color),
+              inset -1px 0 var(--handle-border-color),
+              inset 0 -1px var(--handle-border-color);
+  text-shadow: -1px 0 var(--handle-text-shade-color),
+                0 1px var(--handle-text-shade-color),
+                1px 0 var(--handle-text-shade-color),
+               0 -1px var(--handle-text-shade-color);
+}
